@@ -13,9 +13,10 @@
 @property (nonatomic) float height;
 @property (nonatomic) float length;
 @property (nonatomic) float width;
+@property (nonatomic) NSString *name;
 
-- (instancetype)initBoxWithLength: (float) length withWidth: (float) width andHeight: (float) height;
+- (instancetype)initBoxWithLength: (float) length withWidth: (float) width Height: (float) height andName: (NSString *)name;
 - (float)calculateVolume;
-- (float)biggerBox:(Box *)otherBox;
+- (NSString *)boxFit:(Box *)otherBox;
 
 @end
