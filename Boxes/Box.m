@@ -26,12 +26,8 @@
     return self.length * self.width * self.height;
 }
 
-- (NSString *)boxFit:(Box *)otherBox {
-    if ([self calculateVolume] > [otherBox calculateVolume ]) {
-    return [NSString stringWithFormat:@"You can fit %.2f box %@'s inside box %@.", [self calculateVolume] / [otherBox calculateVolume], otherBox.name, self.name];
-    } else {
-        return [NSString stringWithFormat:@"You can fit %.2f box %@'s inside box %@.", [otherBox calculateVolume] / [self calculateVolume], self.name, otherBox.name];
-    }
+- (float)boxFit:(Box *)otherBox {
+    return [self calculateVolume] / [otherBox calculateVolume];
 }
 
 @end

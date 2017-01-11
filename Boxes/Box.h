@@ -17,6 +17,6 @@
 
 - (instancetype)initBoxWithLength: (float) length withWidth: (float) width Height: (float) height andName: (NSString *)name;
 - (float)calculateVolume;
-- (NSString *)boxFit:(Box *)otherBox;
+- (float)boxFit:(Box *)otherBox;
 
 @end
